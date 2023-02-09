@@ -29,6 +29,7 @@ const TitleMovie = styled.p`
   padding-top: 15px;
   padding-bottom: 15px;
   font-weight: 600;
+  font-size: 12px;
 `;
 const LinkDiv = styled(NavLink)`
   text-decoration: none;
