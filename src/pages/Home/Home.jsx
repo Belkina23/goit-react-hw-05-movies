@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import MovieAPI from '../../services/apiFilms';
 import MovieList from 'components/MovieList';
 import holder from '../../images/holder.png';
+import Loader from 'components/Loader';
 import { Container } from './Home.styled';
 
 const Home = () => {
     const [movies, setMovies] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
 
 
     useEffect(() => {
@@ -35,7 +37,7 @@ return (
 <main>
 	<Container>
     <h1>Trending today</h1>
-    <MovieList movies={movies} />
+    {isLoading ? <Loader /> : <MovieList movies={movies} />}
 	</Container>
 </main>
 )
