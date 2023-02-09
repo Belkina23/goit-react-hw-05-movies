@@ -12,7 +12,9 @@ const Home = () => {
 
     useEffect(() => {
 		MovieAPI.getTrending('week').then(movies => {
+			
 			const info = movies.reduce((acc, movie) => {
+				setIsLoading(true);
 				const poster = movie.poster_path
 					? `https://image.tmdb.org/t/p/original/${movie.poster_path}`
 					: holder;
@@ -23,6 +25,7 @@ const Home = () => {
 					poster_path: poster,
 					vote_average: movie.vote_average,
 				};
+				setIsLoading(false);
 				return [...acc, film];
 			}, []);
 
