@@ -9,6 +9,7 @@ const ListMovies = styled.ul`
   width: 1460px;
   justify-content: center;
   padding: 0;
+  margin-bottom: 50px;
 `;
 
 const ListItemMovie = styled.li`
@@ -16,6 +17,13 @@ const ListItemMovie = styled.li`
   overflow: hidden;
   border-radius: 5%;
   text-align: center;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  :hover,
+    :focus {
+      box-shadow: 0px 0px 17px 5px rgba(15, 15, 15, 0.47);
+    }
+  
 `;
 
 const PosterMovie = styled.img`
