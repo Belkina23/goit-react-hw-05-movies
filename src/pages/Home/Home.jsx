@@ -37,12 +37,10 @@ const Home = () => {
 
 
 return (
-<main>
 	<Container>
     <h1>Trending today</h1>
     {isLoading ? <Loader /> : <MovieList movies={movies} />}
 	</Container>
-</main>
 )
 }
 
